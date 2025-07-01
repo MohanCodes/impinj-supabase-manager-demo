@@ -1,0 +1,28 @@
+Literally anyone should be able to set this up.
+
+https://support.impinj.com/hc/en-us/articles/360010077479-Octane-SDK-Installation-Instructions
+https://support.impinj.com/hc/en-us/articles/219015497-Setting-up-Octane-SDK-Java-with-Eclipse
+Sets up the com.examples java files, just make your own package and call it what you want
+https://hc.apache.org/downloads.cgi only dragged commons-logging, httpclient, and httpcore for supabase into lib
+Used HttpClient 4.5.14 because sticking with the oldest version seems to always work
+Make sure to build path for all libraries you plan to use, or else you get the red underline of death.
+Had to use another HttpClient library because the native Http was released in Java 11
+Using the IPJ-REV-R220
+Noting the last three couplets (15-25-B4) in the MAC address sticker on the side of the IMPINJ
+Connected power through DC 24V
+Connected IMPINJ ethernet port to computer ethernet port
+http://speedwayR-15-25-B4/ for web information (root/impinj) (last three couplets noted above)
+Used Octane SDK Java 3.0.0 because the IMPINJ software is 6.4.1.240
+Used really old Java SE-1.8 for the whole Java project because the IMPINJ software is 6.4.1.240
+Take a look at my src/log4j.properties, it may or may not be a little different than the one IMPINJ docs uses
+Made config.properties with my Supabase URL and KEY
+
+CREATE TABLE public.test (
+  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  test TEXT -- This is the column we will update
+);
+
+-- Optional: Insert a row to test with
+INSERT INTO public.test (test) VALUES ('Hello World');
+
+above is the SQL snippet used for the database structure
